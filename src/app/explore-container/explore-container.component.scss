@@ -25,3 +25,35 @@
 #container a {
   text-decoration: none;
 }
+
+.verificador{
+  text-align: center;
+}
+
+ion-item{
+  position: relative;
+  bottom: -40px;
+}
+ion-button{
+  position: relative;
+  bottom: -40px;
+}
+p{
+  text-align: center;
+  position: relative;
+  bottom: -40px;
+}
+#r{
+  color: red;
+}
+
+#resul{
+  color: red;
+}
+ion-img{
+  width: 20%;
+  height: 20%;
+  position: relative;
+  left: 40%;
+  bottom: -40px;
+}
