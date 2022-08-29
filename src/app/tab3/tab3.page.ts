@@ -7,8 +7,8 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['tab3.page.scss','../explore-container/explore-container.component.scss']
 })
 export class Tab3Page {
-  base: string
-  altura:string
+  base: string = null
+  altura:string = null
   resultado:string
   mensagem:string
 
@@ -24,13 +24,17 @@ export class Tab3Page {
     await alert.present();
   }
   calcular(){
-    var base = parseInt(this.base)
-    var altura = parseInt(this.altura)
+    var base = parseFloat(this.base)
+    var altura = parseFloat(this.altura)
 
-    if(base != null && altura != null){
+    if(this.base != null && this.altura != null){
         var r = (base * altura) / 2
-        this.mensagem = 'A área do triângulo é:'
         this.resultado = r.toFixed(2)
+      }
+      else{
+        this.mensagem = 'Campo não preenchido'
+        this.presentAlert()
+        this.mensagem = ''
       }
     }
   }
